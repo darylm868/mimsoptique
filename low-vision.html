@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Low Vision Device Expert | Mims Optique</title>
+  <meta name="description" content="Low vision can make daily life a challenge — but it doesn't have to limit your independence. We're here to help." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <style>
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --mo-gold: #C9A96E;
+      --mo-dark: #1a1a1a;
+      --mo-mid: #3d3d3d;
+      --mo-light: #f7f5f0;
+      --mo-white: #ffffff;
+      --mo-accent: #8B6F47;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      color: var(--mo-dark);
+      background: var(--mo-white);
+      overflow-x: hidden;
+    }
+
+    /* ── TOP BAR ── */
+    .mo-topbar {
+      background: var(--mo-dark);
+      color: #ccc;
+      font-size: 12px;
+      text-align: center;
+      padding: 8px 16px;
+      letter-spacing: 0.5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .mo-topbar a { color: #ccc; text-decoration: none; transition: color .2s; }
+    .mo-topbar a:hover { color: var(--mo-gold); }
+
+    /* ── NAV ── */
+    .mo-nav {
+      background: var(--mo-white);
+      border-bottom: 1px solid #e8e4dc;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: 70px;
+    }
+    .mo-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: var(--mo-dark);
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    .mo-logo span { color: var(--mo-gold); }
+
+    .mo-nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      align-items: center;
+    }
+    .mo-nav-links a {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--mo-mid);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .mo-nav-links a:hover { color: var(--mo-gold); }
+
+    .mo-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .mo-hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--mo-dark);
+      transition: all .3s;
+    }
+
+    .mo-nav-btn {
+      background: var(--mo-gold);
+      color: var(--mo-white);
+      border: none;
+      padding: 10px 22px;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all .2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .mo-nav-btn:hover { background: var(--mo-accent); }
+    .mo-nav-btn-outline {
+      background: transparent !important;
+      color: var(--mo-gold) !important;
+      border: 1.5px solid var(--mo-gold) !important;
+      padding: 10px 22px;
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all .2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .mo-nav-btn-outline:hover { background: var(--mo-gold) !important; color: #1a1a1a !important; }
+    .mo-nav-btn-dark {
+      background: #1a1a1a !important;
+      color: #fff !important;
+      border: 1.5px solid #1a1a1a !important;
+      padding: 10px 22px;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all .2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .mo-nav-btn-dark:hover { background: var(--mo-gold) !important; border-color: var(--mo-gold) !important; color: #1a1a1a !important; }
+
+    /* ── HERO ── */
+    .mo-hero {
+      position: relative;
+      background: #1a1a1a;
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .mo-hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 0;
+    }
+    .mo-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(10,8,6,0.62) 0%, rgba(10,8,6,0.55) 100%);
+      z-index: 1;
+    }
+    .mo-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='28'%3E%3Cpolygon points='12,1 23,6.5 23,21.5 12,27 1,21.5 1,6.5' fill='none' stroke='%23c9a96e' stroke-width='0.5' stroke-opacity='0.04'/%3E%3Cpolygon points='0,14 11,19.5 11,34.5 0,40 -11,34.5 -11,19.5' fill='none' stroke='%23c9a96e' stroke-width='0.5' stroke-opacity='0.04'/%3E%3Cpolygon points='24,14 35,19.5 35,34.5 24,40 13,34.5 13,19.5' fill='none' stroke='%23c9a96e' stroke-width='0.5' stroke-opacity='0.04'/%3E%3C/svg%3E");
+      background-size: 24px 28px;
+      z-index: 2;
+    }
+    .mo-hero-content {
+      position: relative;
+      z-index: 3;
+      padding: 80px 24px;
+      max-width: 680px;
+    }
+    .mo-hero-subtitle {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--mo-gold);
+      margin-bottom: 18px;
+    }
+    .mo-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(32px, 5vw, 54px);
+      font-weight: 300;
+      color: var(--mo-white);
+      line-height: 1.2;
+      margin-bottom: 22px;
+    }
+    .mo-hero p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.8;
+      max-width: 460px;
+      margin: 0 auto 36px;
+    }
+    .mo-hero-btns {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+    }
+    .mo-btn-primary {
+      background: var(--mo-gold);
+      color: var(--mo-white);
+      border: none;
+      padding: 15px 34px;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background .2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .mo-btn-primary:hover { background: var(--mo-accent); }
+    .mo-btn-outline {
+      background: transparent;
+      color: var(--mo-white);
+      border: 1px solid rgba(255,255,255,0.4);
+      padding: 15px 34px;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: border-color .2s, color .2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .mo-btn-outline:hover { border-color: var(--mo-gold); color: var(--mo-gold); }
+
+    /* ── QUICK LINKS ── */
+    .mo-quick-links {
+      background: var(--mo-dark);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid rgba(201,169,110,0.3);
+    }
+    .mo-quick-link {
+      padding: 22px 16px;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.06);
+      text-decoration: none;
+      transition: background .2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .mo-quick-link:last-child { border-right: none; }
+    .mo-quick-link:hover { background: rgba(201,169,110,0.08); }
+    .mo-quick-link i { font-size: 20px; color: var(--mo-gold); }
+
+    /* Call or Text dropdown */
+    .mo-quick-link-contact {
+      position: relative;
+      cursor: pointer;
+    }
+    .mo-contact-dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-top: 2px solid var(--mo-gold);
+      min-width: 220px;
+      z-index: 100;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+    .mo-quick-link-contact:hover .mo-contact-dropdown { display: block; }
+    .mo-contact-dropdown a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 20px;
+      color: #ccc;
+      text-decoration: none;
+      font-family: 'Jost', sans-serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #2a2a2a;
+      transition: color .2s, background .2s;
+    }
+    .mo-contact-dropdown a:last-child { border-bottom: none; }
+    .mo-contact-dropdown a:hover { color: var(--mo-gold); background: rgba(201,169,110,0.06); }
+    .mo-contact-dropdown a i { font-size: 16px; color: var(--mo-gold); }
+    .mo-quick-link span {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #aaa;
+    }
+
+    /* ── SECTIONS ── */
+    .mo-section { padding: 80px 40px; }
+    .mo-section-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--mo-gold);
+      margin-bottom: 12px;
+    }
+    .mo-section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(26px, 3.5vw, 40px);
+      font-weight: 300;
+      color: var(--mo-dark);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .mo-section-text {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.8;
+      max-width: 520px;
+    }
+
+    /* ── WELCOME ── */
+    .mo-welcome { background: var(--mo-light); }
+    .mo-welcome-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .mo-welcome-badge {
+      display: inline-block;
+      background: var(--mo-dark);
+      color: var(--mo-gold);
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      margin-top: 28px;
+      cursor: pointer;
+      border: none;
+      transition: background .2s;
+      text-decoration: none;
+    }
+    .mo-welcome-badge:hover { background: var(--mo-accent); color: var(--mo-white); }
+    .mo-welcome-visual {
+      border-radius: 4px;
+      overflow: hidden;
+      min-height: 380px;
+      background: var(--mo-dark);
+      border-radius: 2px;
+      height: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .mo-glasses-svg { width: 180px; opacity: 0.9; }
+    .mo-welcome-visual-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(201,169,110,0.12);
+      padding: 18px;
+      text-align: center;
+      border-top: 1px solid rgba(201,169,110,0.25);
+    }
+    .mo-welcome-visual-caption p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      color: var(--mo-white);
+      font-style: italic;
+    }
+
+    /* ── SERVICES ── */
+    .mo-services { background: var(--mo-white); }
+    .mo-services-inner { max-width: 960px; margin: 0 auto; }
+    .mo-services-header { text-align: center; margin-bottom: 52px; }
+    .mo-services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .mo-service-card {
+      border: 1px solid #e8e4dc;
+      padding: 36px 30px;
+      transition: border-color .2s, transform .2s;
+      cursor: pointer;
+      background: var(--mo-white);
+    }
+    .mo-service-card:hover { border-color: var(--mo-gold); transform: translateY(-3px); }
+    .mo-service-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--mo-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    .mo-service-icon i { font-size: 22px; color: var(--mo-gold); }
+    .mo-service-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--mo-dark);
+      margin-bottom: 10px;
+    }
+    .mo-service-card p {
+      font-size: 14px;
+      color: #888;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+    .mo-service-link {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--mo-gold);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .mo-service-link:hover { color: var(--mo-accent); }
+    .mo-services-footer { text-align: center; margin-top: 40px; }
+
+    /* ── TEAM ── */
+    .mo-team {
+      background: var(--mo-dark);
+      padding: 80px 40px;
+    }
+    .mo-team-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 72px;
+      align-items: center;
+      justify-items: center;
+    }
+    .mo-team-photo {
+      background: #221e1a;
+      height: 380px;
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(201,169,110,0.2);
+    }
+    .mo-team-initials {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: rgba(201,169,110,0.12);
+      border: 2px solid rgba(201,169,110,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      color: var(--mo-gold);
+      letter-spacing: 2px;
+    }
+    .mo-team-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--mo-gold);
+      margin-bottom: 14px;
+    }
+    .mo-team-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 3.5vw, 40px);
+      font-weight: 300;
+      color: var(--mo-white);
+      margin-bottom: 8px;
+    }
+    .mo-team-role {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(201,169,110,0.65);
+      margin-bottom: 22px;
+    }
+    .mo-team-bio {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.85;
+      margin-bottom: 30px;
+    }
+    .mo-btn-gold {
+      background: transparent;
+      color: var(--mo-gold);
+      border: 1px solid rgba(201,169,110,0.5);
+      padding: 12px 28px;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all .2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .mo-btn-gold:hover { background: var(--mo-gold); color: var(--mo-white); border-color: var(--mo-gold); }
+
+    /* ── TESTIMONIALS ── */
+    .mo-testimonials { background: var(--mo-light); padding: 80px 40px; }
+    .mo-testimonials-inner { max-width: 1200px; margin: 0 auto; }
+    .mo-test-header { text-align: center; margin-bottom: 52px; }
+    .mo-test-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .mo-test-card {
+      background: var(--mo-white);
+      padding: 30px 26px;
+      border: 1px solid #e8e4dc;
+    }
+    .mo-test-stars { display: flex; gap: 3px; margin-bottom: 14px; }
+    .mo-test-stars i { font-size: 13px; color: var(--mo-gold); }
+    .mo-test-text {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.85;
+      margin-bottom: 22px;
+      font-style: italic;
+    }
+    .mo-test-author { display: flex; align-items: center; gap: 12px; }
+    .mo-author-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--mo-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--mo-gold);
+      flex-shrink: 0;
+    }
+    .mo-author-name { font-size: 13px; font-weight: 600; color: var(--mo-dark); }
+    .mo-author-label { font-size: 11px; color: #aaa; }
+
+    /* ── MAP ── */
+    .mo-map-section { background: var(--mo-white); padding: 0; }
+    /* ── LOCATION CARD ── */
+    .mo-location {
+      background: #111;
+      padding: 80px 40px;
+      border-top: 1px solid #2a2a2a;
+    }
+    .mo-location-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .mo-location-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 500;
+      color: #f5f0eb;
+      margin: 8px 0 28px;
+      line-height: 1.2;
+    }
+    .mo-location-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .mo-location-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid #2a2a2a;
+      color: #c8bfb5;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .mo-location-list li i {
+      color: var(--mo-gold);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .mo-location-list a {
+      color: #c8bfb5;
+      text-decoration: none;
+    }
+    .mo-location-list a:hover { color: var(--mo-gold); }
+    .mo-location-map {
+      border-radius: 12px;
+      overflow: hidden;
+      height: 360px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+    }
+    .mo-location-map iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .mo-location-inner { grid-template-columns: 1fr; gap: 36px; }
+      .mo-location-map { height: 260px; }
+      .mo-location { padding: 56px 20px; }
+    }
+
+    /* ── CTA BAR ── */
+    .mo-cta-bar {
+      background: var(--mo-gold);
+      padding: 52px 40px;
+      text-align: center;
+    }
+    .mo-cta-bar h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 300;
+      color: var(--mo-white);
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+    .mo-btn-white {
+      background: var(--mo-white);
+      color: var(--mo-gold);
+      border: none;
+      padding: 14px 32px;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all .2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .mo-btn-white:hover { background: var(--mo-dark); color: var(--mo-white); }
+    .mo-btn-white-outline {
+      background: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+      padding: 14px 32px;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all .2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .mo-btn-white-outline:hover {
+      background: #1a1a1a;
+      color: #fff;
+      border-color: #1a1a1a;
+    }
+
+    /* ── NEWSLETTER ── */
+    .mo-newsletter {
+      background: var(--mo-light);
+      padding: 48px 40px 40px;
+      text-align: center;
+      border-top: 1px solid #e8e4dc;
+    }
+    .mo-newsletter-inner { max-width: 600px; margin: 0 auto; }
+    .mo-newsletter-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem; font-weight: 500;
+      color: #1a1a1a; margin: 8px 0 14px;
+      line-height: 1.2;
+    }
+    .mo-newsletter-sub {
+      color: #888; font-size: 0.95rem;
+      line-height: 1.75; margin-bottom: 28px;
+    }
+    .mo-newsletter-embed {
+      display: flex;
+      justify-content: center;
+    }
+    @media (max-width: 768px) {
+      .mo-newsletter { padding: 56px 20px; }
+      .mo-newsletter-embed iframe { width: 100% !important; }
+    }
+
+    /* ── FOOTER ── */
+    .mo-footer {
+      background: var(--mo-dark);
+      padding: 64px 40px 28px;
+      color: rgba(255,255,255,0.5);
+    }
+    .mo-footer-inner { max-width: 960px; margin: 0 auto; }
+    .mo-footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 56px;
+      margin-bottom: 52px;
+    }
+    .mo-footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--mo-white);
+      margin-bottom: 14px;
+      text-decoration: none;
+      display: block;
+    }
+    .mo-footer-logo span { color: var(--mo-gold); }
+    .mo-footer-desc { font-size: 13px; line-height: 1.75; margin-bottom: 22px; }
+    .mo-footer-social { display: flex; gap: 10px; }
+    .mo-social-btn {
+      width: 36px;
+      height: 36px;
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: border-color .2s, color .2s;
+      text-decoration: none;
+      color: rgba(255,255,255,0.5);
+    }
+    .mo-social-btn:hover { border-color: var(--mo-gold); color: var(--mo-gold); }
+    .mo-social-btn i { font-size: 16px; }
+    .mo-footer-heading {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--mo-gold);
+      margin-bottom: 18px;
+    }
+    .mo-footer-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .mo-footer-list li {
+      font-size: 13px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .mo-footer-list i { font-size: 15px; color: var(--mo-gold); flex-shrink: 0; margin-top: 1px; }
+    .mo-footer-list a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color .2s; }
+    .mo-footer-list a:hover { color: var(--mo-gold); }
+    .mo-footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 11px;
+    }
+    .mo-footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .mo-footer-links a { color: rgba(255,255,255,0.35); text-decoration: none; transition: color .2s; }
+    .mo-footer-links a:hover { color: var(--mo-gold); }
+
+    /* ── MOBILE MENU ── */
+    .mo-mobile-menu {
+      display: none;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: var(--mo-dark);
+      border-bottom: 2px solid #2a2a2a;
+      padding: 20px 24px;
+      z-index: 99;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .mo-mobile-menu.open { display: flex; }
+    .mo-mobile-menu a {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #ccc;
+      text-decoration: none;
+      padding: 12px 0;
+      border-bottom: 1px solid #2a2a2a;
+      transition: color .2s;
+    }
+    .mo-mobile-menu a:hover { color: var(--mo-gold); }
+    .mo-mobile-menu a:last-child { border-bottom: none; color: #fff; background: var(--mo-gold); text-align: center; padding: 12px; margin-top: 8px; letter-spacing: 2px; }
+    .mo-mobile-menu a:nth-last-child(2) { color: var(--mo-gold); font-weight: 700; border-bottom: 1px solid #2a2a2a; }
+
+    
+/* Hamburger Animation */
+.mo-hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mo-hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mo-hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+/* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .mo-nav { padding: 0 20px; }
+      .mo-nav-links { display: none; }
+      .mo-nav-btn { display: none; }
+      .mo-hamburger { display: flex; }
+      .mo-section { padding: 56px 20px; }
+      .mo-welcome-inner { grid-template-columns: 1fr; gap: 36px; }
+      .mo-services-grid { grid-template-columns: 1fr; }
+      .mo-team-inner { grid-template-columns: 1fr; gap: 36px; }
+      .mo-team-photo { height: 220px; }
+      .mo-test-grid { grid-template-columns: 1fr; }
+      .mo-footer-grid { grid-template-columns: 1fr; gap: 36px; }
+      .mo-footer-bottom { flex-direction: column; align-items: flex-start; }
+      .mo-quick-links { grid-template-columns: repeat(3, 1fr); }
+      .mo-team { padding: 56px 20px; }
+      .mo-testimonials { padding: 56px 20px; }
+      .mo-test-grid { grid-template-columns: 1fr; }
+      .mo-cta-bar { padding: 48px 20px; }
+      .mo-footer { padding: 48px 20px 24px; }
+      .mo-topbar { gap: 12px; font-size: 11px; }
+    }
+
+    @media (max-width: 480px) {
+      .mo-quick-links { grid-template-columns: 1fr; }
+      .mo-quick-link { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); flex-direction: row; justify-content: center; gap: 10px; }
+    }
+  
+    /* ── SERVICE PAGE ── */
+    .mo-service-hero { background: var(--mo-dark); padding: 80px 40px 60px; text-align: center; border-bottom: 1px solid #2a2a2a; }
+    .mo-service-hero-label { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--mo-gold); margin-bottom: 16px; }
+    .mo-service-hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 500; color: #f5f0eb; margin-bottom: 20px; line-height: 1.15; }
+    .mo-service-hero-sub { color: #b0a898; font-size: 1rem; line-height: 1.75; max-width: 580px; margin: 0 auto 28px; }
+    .mo-service-body { max-width: 860px; margin: 0 auto; padding: 72px 40px; }
+    .mo-service-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 500; color: #1a1a1a; margin: 40px 0 14px; }
+    .mo-service-body h2:first-child { margin-top: 0; }
+    .mo-service-body p { color: #555; font-size: 1rem; line-height: 1.8; margin-bottom: 16px; }
+    .mo-service-body ul { list-style: none; padding: 0; margin: 0 0 24px; }
+    .mo-service-body ul li { color: #555; font-size: 0.97rem; padding: 7px 0; display: flex; align-items: flex-start; gap: 10px; border-bottom: 1px solid #f0ece7; }
+    .mo-service-body ul li::before { content: '✓'; color: var(--mo-gold); font-weight: bold; flex-shrink: 0; margin-top: 2px; }
+    .mo-service-cta { background: #1a1a1a; padding: 64px 40px; text-align: center; }
+    .mo-service-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: #f5f0eb; margin-bottom: 12px; }
+    .mo-service-cta p { color: #b0a898; margin-bottom: 28px; }
+    @media (max-width: 768px) { .mo-service-body { padding: 48px 20px; } .mo-service-hero { padding: 60px 20px 40px; } }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="mo-topbar">
+    <span><i class="ti ti-map-pin" style="font-size:13px; margin-right:4px; color:#c9a96e"></i>2389 Mountain Ave Suite 3, Scotch Plains, NJ 07076</span>
+    <span><i class="ti ti-phone" style="font-size:13px; margin-right:4px; color:#c9a96e"></i><a href="tel:9088236467">(908) 823-6467</a></span>
+    <span><span style="color:#C9A96E;">★★★★★</span> <a href="http://search.google.com/local/writereview?placeid=ChIJweHnN2uxw4kR02lHhlWWxoI" target="_blank" rel="noopener">Leave a Review</a></span>
+  </div>
+
+  <!-- NAV -->
+  <nav class="mo-nav">
+    <a href="index.html" class="mo-logo">Mims <span>Optique</span></a>
+    <ul class="mo-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="https://shop.mimsoptique.com/" target="_blank" rel="noopener">Browse Frames</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <a href="cherry.html" class="mo-nav-btn" style="background: transparent; border: 1px solid var(--mo-gold); color: var(--mo-gold); margin-right: 8px;">Financing</a>
+    <a href="https://calendly.com/wendy-mimsoptics" target="_blank" rel="noopener" class="mo-nav-btn">Book Online</a>
+    <button class="mo-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mo-mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="https://shop.mimsoptique.com/" target="_blank" rel="noopener">Browse Frames</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="cherry.html" style="color: var(--mo-gold);">Financing</a>
+    <a href="https://calendly.com/wendy-mimsoptics" target="_blank" rel="noopener" style="color: var(--mo-gold);">Book Online →</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="mo-service-hero">
+    <p class="mo-service-hero-label">Our Services</p>
+    <h1 class="mo-service-hero-title">Low Vision Device Expert</h1>
+    <p class="mo-service-hero-sub">Low vision can make daily life a challenge — but it doesn't have to limit your independence. We're here to help.</p>
+    <a href="https://calendly.com/wendy-mimsoptics" target="_blank" rel="noopener" class="mo-btn-gold">Book a Consultation</a>
+  </div>
+
+  <!-- BODY CONTENT -->
+  <div class="mo-service-body">
+    
+    <h2>Regain Your Independence</h2>
+    <p>Low vision can make daily life a challenge, but it doesn't have to limit your independence. At Mims Optique, we specialize in low vision devices and solutions that help patients with significant visual impairment make the most of their remaining vision.</p>
+    <p>We take a personalized approach — taking the time to understand each patient's specific needs, lifestyle, and goals before recommending any device or solution.</p>
+
+    <h2>Low Vision Solutions We Offer</h2>
+    <ul>
+      <li>Magnification devices for reading and close work</li>
+      <li>Telescopic and bioptic lenses</li>
+      <li>Electronic magnifiers and digital aids</li>
+      <li>Specialty tinted lenses for contrast enhancement</li>
+      <li>Consultation on assistive technology</li>
+      <li>Guidance for patients with macular degeneration, glaucoma, and other conditions</li>
+      <li>Follow-up support and device training</li>
+    </ul>
+
+    <h2>Who We Help</h2>
+    <p>Our low vision services are designed for patients whose vision cannot be fully corrected with standard eyeglasses or contact lenses. This includes patients with macular degeneration, diabetic retinopathy, glaucoma, retinitis pigmentosa, and other conditions that affect central or peripheral vision.</p>
+    <p>We work closely with ophthalmologists and other eye care providers to ensure our patients receive the most comprehensive care possible.</p>
+    
+  </div>
+
+  <!-- CTA -->
+  <div class="mo-service-cta">
+    <h2>Ready to Get Started?</h2>
+    <p>Book a consultation with our team — we'd love to help.</p>
+    <a href="https://calendly.com/wendy-mimsoptics" target="_blank" rel="noopener" class="mo-btn-gold">Book an Appointment</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="mo-footer">
+    <div class="mo-footer-inner">
+      <div class="mo-footer-grid">
+        <div>
+          <a href="index.html" class="mo-footer-logo">Mims <span>Optique</span></a>
+          <p class="mo-footer-desc">Our team is dedicated to providing a convenient and professional eyewear styling experience, whether virtually or at your preferred location.</p>
+          <div class="mo-footer-social">
+            <a class="mo-social-btn" href="https://www.facebook.com/profile.php?id=61566801234331" target="_blank" rel="noopener" aria-label="Facebook"><i class="ti ti-brand-facebook"></i></a>
+            <a class="mo-social-btn" href="https://www.instagram.com/mims.optique" target="_blank" rel="noopener" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
+            <a class="mo-social-btn" href="https://www.tiktok.com/@the_eyewear_fashionista" target="_blank" rel="noopener" aria-label="TikTok"><i class="ti ti-brand-tiktok"></i></a>
+            <a class="mo-social-btn" href="https://maps.app.goo.gl/NtCrWyAF6tJAzeoV6" target="_blank" rel="noopener" aria-label="Google Maps"><i class="ti ti-map-pin"></i></a>
+          </div>
+        </div>
+        <div>
+          <p class="mo-footer-heading">Visit Us</p>
+          <ul class="mo-footer-list">
+            <li><i class="ti ti-map-pin"></i><span><a href="https://maps.app.goo.gl/NtCrWyAF6tJAzeoV6" target="_blank" rel="noopener">2389 Mountain Ave Suite 3,<br>Scotch Plains, NJ 07076</a></span></li>
+            <li><i class="ti ti-phone"></i><a href="tel:9088236467">(908) 823-6467</a></li>
+            <li><i class="ti ti-mail"></i><a href="mailto:info@mimsoptique.com">info@mimsoptique.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="mo-footer-heading">Appointments</p>
+          <p style="font-size:13px; line-height:1.75; margin-bottom:18px;">We will do our best to accommodate your busy schedule. Request an appointment today!</p>
+          <a href="https://calendly.com/wendy-mimsoptics" target="_blank" rel="noopener" class="mo-btn-gold">Request Appointment</a>
+        </div>
+      </div>
+      <div class="mo-footer-bottom">
+        <span>&copy; 2026 Mims Optique. All rights reserved.</span>
+        <div class="mo-footer-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    document.querySelectorAll('.mo-mobile-menu a').forEach(l => l.addEventListener('click', () => mobileMenu.classList.remove('open')));
+  </script>
+
+</body>
+</html>
