@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://teal-daffodil-df2de8.netlify.app/sitemap.xml
